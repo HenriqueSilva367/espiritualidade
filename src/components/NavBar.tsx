@@ -1,28 +1,28 @@
-
+'use client'
+import Image from 'next/image'
+import Logo from '../../public/assets/logo.png'
 export default function NavBar(){
   return(
-    <div className="flex w-screen justify-around">
-      <div className="flex flex-1 justify-end md:justify-center">
-        <div className="pointer-events-auto md:hidden">
-          <div className="flex">
-          <button className="flex rounded-full px-4 py-2 bg-gray-400 mt-5 mr-10">
-            Menu
-          </button>
+    <nav className="">
+      <div className='max-w-7x1 mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex items-center justify-around h-16'>
+          <div className='flex items-center justify-center'>
+            <a href="">
+            <Image src={Logo} alt="Logo" className='h-10 w-10 rounded-full'  />
+            </a>
+            <div className='hidden md:block justify-center '>
+              <div className='ml-10 flex items-certer space-x-4'>
+                <a href="#" className='cursor-pointer'>Home</a>
+                <a href="#" className='cursor-pointer'>Livros</a>
+                <a href="#" className='cursor-pointer'>AudioBook</a>
+                <a href="#" className='cursor-pointer'>Filmes</a>
+                <a href="#" className='cursor-pointer'>Sobre nós</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="pointer-events-auto hidden md:block mt-5">
-          <nav className="flex items-center justify-center rounded-md w-25">
-            <ul className="flex items-center  rounded-full py-2 ">
-              <li className="cursor-pointer"><a className="relative block px-3 py-2" href="">Home</a></li>
-              <li className="cursor-pointer"><a className="relative block px-3 py-2" href="">Livros</a></li>
-              <li className="cursor-pointer"><a className="relative block px-3 py-2" href="">ÁudioBooks</a></li>
-              <li className="cursor-pointer"><a className="relative block px-3 py-2" href="">Autores</a></li>
-              <li className="cursor-pointer"><a className="relative block px-3 py-2" href="">Sobre nós</a></li>
-              
-            </ul>
-          </nav>
+          <div>Menu</div>
         </div>
       </div>
-    </div>
+    </nav>    
   )
 }

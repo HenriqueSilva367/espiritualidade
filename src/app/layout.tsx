@@ -1,12 +1,16 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import {
+  Roboto_Flex as Roboto,
+  Bai_Jamjuree as BaiJamjuree,
+} from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ subsets: ["latin"], variable: '--font-roboto' });
+const baiJamjuree = BaiJamjuree({ subsets: ["latin"], weight: '700', variable: '--font-bai-jamjuree' });
 
 export const metadata: Metadata = {
   title: 'Ser Em Evolução',
-  description: 'Henrique Silva',
+  description: 'É um biblioteca espiritualista',
 }
 
 export default function RootLayout({
@@ -16,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.variable} ${baiJamjuree.variable} font-sans  text-gray-900`}>{children}</body>
     </html>
   )
 }
