@@ -16,34 +16,40 @@ export default function Books(){
     { id: 2, name: 'Nosso lar', author: 'Chico Chavier', year: 1993 },
     { id: 3, name: 'A casa do escritor', author: 'Vera lúcia', year: 1993 },
     { id: 4, name: 'Vivendo no mundo dos espiritos', author: 'Vera lúcia', year: 1993 },
-    { id: 5, name: 'Violetas de patrícia', author: 'Vera lúcia', year: 1993 },
-    { id: 6, name: 'O livro dos espiritos', author: 'Allan Kardec', year: 1993 },
-
- 
+    { id: 5, name: 'Violetas de patrícia', author: 'Vera lúcia', year: 1993 }, 
   ]
 
 return(
-  <div className=''>
-    <div className='flex'>
-    <h1 className="mb-10 text-4xl text-violet-600 ">Livros</h1>
-    </div>
-    <div className="flex flex-col items-center justify-center sm md lg xl">
-      
-      <div className="flex">
-          <div className="flex flex-row">
-            {livros.map((livro) => {
-              return(
-                <div key={livro.id} className="flex flex-col border rounded-md bg-white border-slate-50 w-64 h-80 mb-10 mr-3">
-                  <div className='flex flex-col items-center justify-center mt-2'>
-                    <Image src={paginaLivro} className=' sm md lg xl border rounded-md bg-no-repeat bg-center' alt=""  />
-                    <span>{livro.name}</span>
-                  </div>
+  <div className="">
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-purple-400">Livros</h2>
+
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-8">
+          {livros.map((livro) => (
+            <div key={livro.id} className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <Image
+                  src={paginaLivro}
+                  alt=''
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href=''>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {livro.name}
+                    </a>
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{livro.author}</p>
                 </div>
-              )
-            })}
-          </div>
+                <p className="text-sm font-medium text-gray-900">{livro.year}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
   )
 }
