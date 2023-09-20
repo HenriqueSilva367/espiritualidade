@@ -19,19 +19,21 @@ export default function Perfil(){
   ]
 
 return (
-  <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8'>
-      <h2 className='mb-10 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Leitores do mês</h2>
-    <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5 xl:gap-x-1">
-      {perfils.map((perfil) =>{
-        return (
-            <div key={perfil.id} className='border border-gray-200 w-48 h-40 rounded-3xl ml-4 '>
-              <Image src={img} alt='' className='mx-auto mt-4 rounded-full border-2 border-green-300 w-14'/>
-              <span className='flex items-center justify-center'>{perfil.name}</span>
-              <span className='flex items-center justify-center'>@Rebeca</span>
-              <span className='flex items-center justify-center'>54 Livros</span>
-            </div>
-        )
-      })}
+  <div>
+    <div className='mx-auto my-10 max-w-2xl sm:px-6 lg:max-w-7xl lg:px-8'>
+      <h2 className='text-3xl ml-4 font-bold tracking-tight sm:text-4xl text-black'>Leitores do mês</h2>
+      <div className="mt-6 grid grid-cols-2 gap-y-5 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 xl:gap-x-1">
+        {perfils.map((perfil) =>{
+          return (
+            <div key={perfil.id} className='border border-gray-200 w-44 h-40 rounded-3xl ml-1'>
+                <Image src={img} alt='' className='mx-auto mt-4 rounded-full border-2 border-green-300 w-14'/>
+                <span className='flex items-center justify-center'>{perfil.name}</span>
+                <span className='flex items-center justify-center'>@Rebeca</span>
+                <span className='flex items-center justify-center text-purple-300'>54 Livros</span>
+              </div>
+          )
+        })}
+      </div>
     </div>
   </div>
   )
