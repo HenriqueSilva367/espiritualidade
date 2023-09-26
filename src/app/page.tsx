@@ -2,6 +2,7 @@
 import AudioBooks from "@/components/AudioBooks";
 import Books from "@/components/Books";
 import CommunityCard from "@/components/CommunityCard";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Perfil from "@/components/Parfil";
 import Image from 'next/image'
@@ -16,6 +17,7 @@ export default function Home() {
       <Perfil />
       <AudioBooks />  
       <CommunityCard/>
+      <Footer/>
     </div>
   </div>
   )

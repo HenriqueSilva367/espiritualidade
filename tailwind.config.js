@@ -37,6 +37,12 @@ module.exports = {
           50: "#DC3546",
           100: "#E01E1E",
         },
+        black: {
+          50: '#717171',
+          100: '#3A3A3A',
+          150: '#202020',
+          200: '#0C0C0C'
+        },
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
