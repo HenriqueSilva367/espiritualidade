@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import img from '../../public/assets/photo-1494790108377-be9c29b29330.avif'
 
-export default function Perfil(){
+export default function ProfileAvatar(){
 
   interface infoLivros { 
     id: number; 

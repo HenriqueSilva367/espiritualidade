@@ -4,7 +4,7 @@ import Books from "@/components/Books";
 import CommunityCard from "@/components/CommunityCard";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Perfil from "@/components/Parfil";
+import ProfileAvatar from "@/components/ProfileAvatar";
 import Image from 'next/image'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Header />
       <Books /> 
-      <Perfil />
+      <ProfileAvatar />
       <AudioBooks />  
       <CommunityCard/>
       <Footer/>
